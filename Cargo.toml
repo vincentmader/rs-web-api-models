@@ -1,0 +1,12 @@
+[package]
+name = "rs-web-api-models"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+regex = "1.10.4"
+serde_json = "1.0.116"
+
+[dependencies.serde]
+version = "1.0.198"
+features = ["derive"]
