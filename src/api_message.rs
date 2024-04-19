@@ -13,6 +13,7 @@ impl From<ApiMessage> for String {
                 ApiOk::LoginSucceeded => "Login succeeded.",
                 ApiOk::RegistrationSucceeded => "Registration succeeded.",
                 ApiOk::PasswordResetMailWasSent => "Password reset mail was sent.",
+                ApiOk::FileUploadSucceeded => "File upload succeeded.",
             },
             ApiMessage::Err(msg) => match msg {
                 ApiError::LoginError(msg) => match msg {
@@ -52,6 +53,7 @@ pub enum ApiOk {
     LoginSucceeded,
     RegistrationSucceeded,
     PasswordResetMailWasSent,
+    FileUploadSucceeded,
 }
 
 #[derive(Clone, Debug, Serialize, Deserialize)]
